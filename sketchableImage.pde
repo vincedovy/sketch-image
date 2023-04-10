@@ -7,8 +7,8 @@ Boolean imgSelected = false;
 // method to get the current user's home directory and appending /images/ to it.
 void setup() {
   size(1600, 1200);
-  File initialDir = new File(System.getProperty("user.home") + "/Pictures/watercolors/*.jpg");
-  selectInput("Select a file to open:", "fileSelected", initialDir);
+  String initialDir = System.getProperty("user.home") + "/Pictures/watercolors/*.jpg";
+  selectInput("Select a file to open:", "fileSelected", new File(initialDir));
 }
 
 // When the user selects a file, the fileSelected() method is called and the selected file path is
